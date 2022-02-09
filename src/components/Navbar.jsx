@@ -10,11 +10,11 @@ function Navbar() {
     const showSidebar = () => setSidebar(!sidebar);
   return <>
    {/* TOP BAR */}
-   <IconContext.Provider value={{color: '#fff'}}>
+   <IconContext.Provider value={{color: '#000'}}>
 <div className="navbar">
-    <Link to="/" className='menu__bars'>
+    <button className='menu__bars'>
 <FaIcons.FaBars onClick={showSidebar}/>
-    </Link>
+    </button>
     <Link to="/" className='menu__title'>
         Algorythmic <FaIcons.FaCodepen />
     </Link>
@@ -23,9 +23,9 @@ function Navbar() {
 <nav className={sidebar ? 'nav__menu nav__menu--active': 'nav__menu'}>
     <ul className="nav__menu__items" onClick={showSidebar}>
         <li className="navbar--toggle">
-        <Link to="/" className='menu__bars'>
+        <button className='menu__bars'>
             <AiIcons.AiOutlineClose />
-          </Link>
+          </button>
         </li>
         {NavbarData.map((item, index) => {
     return (

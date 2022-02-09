@@ -1,13 +1,12 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Home from './pages/Home';
+import { HashRouter as Router, Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <>
-    <Router><Navbar />
+    <Router ><Navbar />
     <Routes>
-      <Route path='/' element={<Home />}></Route>
+      <Route path='/' ></Route>
     </Routes>
     </Router>
     </>
